@@ -1,0 +1,24 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "../..",
+    "baseUrl": ".",
+    "composite": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/*": ["src/*"],
+      "@common/*": ["../../packages/types/src/*"],
+      "@utils/*": ["../../packages/utils/src/*"]
+    },
+    "outDir": "../../dist/apps/fe-core",
+    "isolatedModules": false
+  },
+  "include": [
+    "../../packages/types/src",
+    "../../packages/utils/src",
+    "src",
+    "vite.config.ts",
+    "env.d.ts"
+  ],
+}
