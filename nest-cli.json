@@ -1,0 +1,46 @@
+{
+  "collection": "@nestjs/schematics",
+  "monorepo": true,
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true
+  },
+  "projects": {
+    "api": {
+      "type": "application",
+      "root": "apps/api",
+      "sourceRoot": "apps/api/src",
+      "entryFile": "main",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api/tsconfig.json"
+      }
+    },
+    "fe-core": {
+      "type": "application",
+      "root": "apps/fe-core",
+      "sourceRoot": "apps/fe-core/src",
+      "entryFile": "main",
+      "compilerOptions": {
+        "tsConfigPath": "apps/fe-core/tsconfig.json"
+      }
+    },
+    "shared-libs": {
+      "type": "library",
+      "root": "packages/shared-libs",
+      "entryFile": "index",
+      "sourceRoot": "packages/shared-libs/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/shared-libs/tsconfig.lib.json"
+      }
+    },
+    "utils": {
+      "type": "library",
+      "root": "packages/utils",
+      "entryFile": "index",
+      "sourceRoot": "packages/utils/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/utils/tsconfig.lib.json"
+      }
+    }
+  }
+}
